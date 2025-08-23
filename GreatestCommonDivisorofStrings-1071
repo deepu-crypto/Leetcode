@@ -1,0 +1,16 @@
+class Solution(object):
+    def gcdOfStrings(self, str1, str2):
+        """
+        :type str1: str
+        :type str2: str
+        :rtype: str
+        """
+        l1=len(str1)
+        l2=len(str2)
+        if str1[0]!=str2[0]:
+            return ""
+        for i in range(len(str2),0,-1):
+            if(l1%i==0 and l2%i==0 and (str1+str2==str2+str1)):
+                    return str2[:i]
+        return ""
+            
