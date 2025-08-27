@@ -1,0 +1,10 @@
+s="IceCreAm"
+vo="AEIOUaeiou"
+j=len(s)-1
+temp=['']*len(s)
+for i in range(len(s)):
+    if(s[i] in vo):
+        temp[i]=s[i]
+        j=j-1
+print(temp)
+        
