@@ -1,10 +1,18 @@
-s="IceCreAm"
+s="leetcode"
 vo="AEIOUaeiou"
-j=len(s)-1
 temp=['']*len(s)
-for i in range(len(s)):
-    if(s[i] in vo):
-        temp[i]=s[i]
+i,j=0,len(s)-1
+while(i<len(s) and i<=j):
+    temp[i]=s[i]
+    temp[j]=s[j]
+    if(s[i] in vo and s[j] in vo):
+        te=temp[i]
+        temp[i]=temp[j]
+        temp[j]=te
+        i=i+1
+        j=j-1 
+    elif(s[i] not in vo):
+        i=i+1
+    else:
         j=j-1
 print(temp)
-        
